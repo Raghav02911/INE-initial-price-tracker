@@ -1,10 +1,15 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  import.meta.env.VITE_API_URL_PROD ||
+  import.meta.env.REACT_APP_API_URL ||
+  import.meta.env.REACT_APP_API_URL_PROD ||
+  'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 15000,
+  timeout: 30000, // 30s timeout to allow Render free tier cold-start wakeups
   headers: {
     'Content-Type': 'application/json'
   }
