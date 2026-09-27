@@ -1,0 +1,34 @@
+{
+  "name": "ine-price-tracker-backend",
+  "version": "1.0.0",
+  "description": "Node.js + Express backend with Playwright scraper and Supabase/SQLite for INE Price Tracker",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node ../scripts/seed-db.js",
+    "manual-scrape": "node ../scripts/manual-scrape.js"
+  },
+  "keywords": [
+    "scraping",
+    "price-tracker",
+    "playwright",
+    "express",
+    "supabase"
+  ],
+  "author": "INE Developer",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "json2csv": "^5.0.7",
+    "playwright": "^1.40.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

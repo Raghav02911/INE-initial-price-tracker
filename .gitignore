@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+frontend/build/
+
+# Databases & Logs
+*.db
+*.sqlite
+backend/*.db
+logs/
+*.log
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
